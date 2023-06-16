@@ -20,12 +20,16 @@ const createUserZodValidate = z.object({
     address: z.string({
       required_error: 'Address is Required',
     }),
-    budget: z.string({
-      required_error: 'Budget is Required',
-    }),
-    income: z.string({
-      required_error: 'Income is Required',
-    }),
+    budget: z
+      .number({
+        required_error: 'Budget is Required',
+      })
+      .optional(),
+    income: z
+      .number({
+        required_error: 'Income is Required',
+      })
+      .optional(),
   }),
 });
 
