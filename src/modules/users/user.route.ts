@@ -1,13 +1,12 @@
-/* eslint-disable consistent-type-definitions */
 import express from 'express';
 import { UserController } from './user.controller';
 import validateRequest from '../../middlewares/validateRequest';
-import createZodSchema from './user.zodHanadler';
+import createUserZodValidate from './user.zodHanadler';
 const router = express.Router();
 
 router.post(
   '/create-user',
-  validateRequest(createZodSchema),
+  validateRequest(createUserZodValidate),
   UserController.createUser
 );
 

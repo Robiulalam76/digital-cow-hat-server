@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\.70a521c3c09289a9727a53037a16a64353d067f9-audit.json",
+    "files": [
+        {
+            "date": 1686933223358,
+            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-16-06-22-error.log",
+            "hash": "68813f5f4ea1afbd6c07a557fdded325917206a1ea413cb16faabd7615f06a26"
+        }
+    ],
+    "hashType": "sha256"
+}

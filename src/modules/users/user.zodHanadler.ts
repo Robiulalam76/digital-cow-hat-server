@@ -1,13 +1,32 @@
 /* eslint-disable consistent-type-definitions */
-import { z } from 'zod'
+import { z } from 'zod';
+import { userRoles } from './user.constant';
 
-const createZodSchema = z.object({
+const createUserZodValidate = z.object({
   body: z.object({
-    role: z.string({
+    role: z.enum([...userRoles] as [string, ...string[]], {
       required_error: 'Role is Required',
     }),
-    password: z.string().optional(),
+    phoneNumber: z.string({
+      required_error: 'Phone Number is Required',
+    }),
+    name: z.object({
+      firstName: z.string().nonempty('First name is required'),
+      lastName: z.string().nonempty('Last name is required'),
+    }),
+    password: z.string({
+      required_error: 'Password is Required',
+    }),
+    address: z.string({
+      required_error: 'Address is Required',
+    }),
+    budget: z.string({
+      required_error: 'Budget is Required',
+    }),
+    income: z.string({
+      required_error: 'Income is Required',
+    }),
   }),
-})
+});
 
-export default createZodSchema
+export default createUserZodValidate;
