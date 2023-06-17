@@ -2,6 +2,10 @@ import { RequestHandler } from 'express';
 import httpStatus from 'http-status';
 import { CowService } from './cow.service';
 import sendResponse from '../../shared/sendResponse';
+import pick from '../../shared/pick';
+import { cowFilterableFields } from './cow.constant';
+import { paginationFields } from '../../constants/pagination';
+import { ICow } from './cow.interface';
 
 const createCow: RequestHandler = async (req, res, next) => {
   try {
@@ -14,6 +18,29 @@ const createCow: RequestHandler = async (req, res, next) => {
     });
   } catch (err) {
     next(err);
+  }
+};
+
+// get cows by pagination
+const getCowsByDynamic: RequestHandler = async (req, res, next) => {
+  try {
+    const filters = pick(req.query, cowFilterableFields);
+    const paginationOptions = pick(req.query, paginationFields);
+
+    const result = await CowService.getAllCowsByPagination(
+      filters,
+      paginationOptions
+    );
+
+    sendResponse<ICow[]>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Semesters retrieved successfully !',
+      meta: result.meta,
+      data: result.data,
+    });
+  } catch (error) {
+    next(error);
   }
 };
 
@@ -79,6 +106,7 @@ const deleteCow: RequestHandler = async (req, res, next) => {
 
 export const CowController = {
   createCow,
+  getCowsByDynamic,
   getAllCows,
   getSingleCow,
   updateCowInfo,

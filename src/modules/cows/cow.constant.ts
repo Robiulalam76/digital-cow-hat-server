@@ -29,3 +29,22 @@ export const cowBreeds: ICowBreed[] = [
 export const cowLabels: ICowLabel[] = ['for sale', 'sold out'];
 
 export const cowCategories: ICowCategory[] = ['Dairy', 'Beef', 'Dual Purpose'];
+
+export const cowSearchableFields = [
+  'name',
+  'price',
+  'location',
+  'breed',
+  'category',
+];
+
+export const cowFilterableFields = [
+  'searchTerm',
+  'name',
+  'price',
+  'location',
+  'breed',
+  'category',
+  'minPrice',
+  'maxPrice',
+];

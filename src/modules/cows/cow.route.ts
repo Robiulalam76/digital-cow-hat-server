@@ -10,6 +10,10 @@ router.post(
   CowController.createCow
 );
 router.get('/', CowController.getAllCows);
+
+// get cows by pagination
+router.get('/paginate', CowController.getCowsByDynamic);
+
 router.get('/:id', CowController.getSingleCow);
 router.patch(
   '/:id',

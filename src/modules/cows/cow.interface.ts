@@ -38,3 +38,7 @@ export type ICow = {
 };
 
 export type CowModel = Model<ICow, Record<string, unknown>>;
+
+export type ICowFilters = {
+  searchTerm?: string;
+};

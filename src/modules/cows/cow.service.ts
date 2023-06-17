@@ -1,5 +1,10 @@
-import { ICow } from './cow.interface';
+import { SortOrder } from 'mongoose';
+import { paginationHelpers } from '../../helpers/paginationHelper';
+import { cowSearchableFields } from './cow.constant';
+import { ICow, ICowFilters } from './cow.interface';
 import Cow from './cow.model';
+import { IPaginationOptions } from '../../interfaces/pagination';
+import { IGenericResponse } from '../../interfaces/common';
 
 const createCow = async (user: ICow): Promise<ICow | null> => {
   const newCow = new Cow(user);
@@ -7,7 +12,94 @@ const createCow = async (user: ICow): Promise<ICow | null> => {
   return createdCow;
 };
 
-// get all users
+// get all cows by pagination
+const getAllCowsByPagination = async (
+  filters: ICowFilters,
+  paginationOptions: IPaginationOptions
+): Promise<IGenericResponse<ICow[]>> => {
+  const { searchTerm, ...filtersData } = filters;
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelpers.calculatePagination(paginationOptions);
+
+  const andConditions = [];
+
+  if (searchTerm) {
+    andConditions.push({
+      $or: cowSearchableFields.map(field => {
+        const condition: Record<string, unknown> = {};
+
+        if (field === 'price' || field === 'age') {
+          const numericValue = parseInt(searchTerm);
+          if (!isNaN(numericValue)) {
+            condition[field] = numericValue;
+          }
+        } else {
+          condition[field] = {
+            $regex: searchTerm,
+            $options: 'i',
+          };
+        }
+
+        return condition;
+      }),
+    });
+  }
+
+  if (Object.keys(filtersData).length) {
+    andConditions.push({
+      $and: Object.entries(filtersData).map(([field, value]) => {
+        if (field === 'minPrice') {
+          return {
+            price: { $gte: parseInt(String(value), 10) },
+          };
+        } else if (field === 'maxPrice') {
+          return {
+            price: { $lte: parseInt(String(value), 10) },
+          };
+        } else {
+          return {
+            [field]: value,
+          };
+        }
+      }),
+    });
+  }
+
+  // if (Object.keys(filtersData).length) {
+  //   andConditions.push({
+  //     $and: Object.entries(filtersData).map(([field, value]) => ({
+  //       [field]: value,
+  //     })),
+  //   });
+  // }
+
+  const sortConditions: { [key: string]: SortOrder } = {};
+
+  if (sortBy && sortOrder) {
+    sortConditions[sortBy] = sortOrder;
+  }
+
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
+
+  const result = await Cow.find(whereConditions)
+    .sort(sortConditions)
+    .skip(skip)
+    .limit(limit);
+
+  const total = await Cow.countDocuments();
+
+  return {
+    meta: {
+      page,
+      limit,
+      total,
+    },
+    data: result,
+  };
+};
+
+// get all cows
 const getCows = async (): Promise<ICow[]> => {
   const cows = await Cow.find({}).sort({ _id: -1 });
   return cows;
@@ -38,6 +130,7 @@ const deleteCowById = async (id: string): Promise<ICow | null> => {
 
 export const CowService = {
   createCow,
+  getAllCowsByPagination,
   getCows,
   getSingleCowById,
   updateCowById,
