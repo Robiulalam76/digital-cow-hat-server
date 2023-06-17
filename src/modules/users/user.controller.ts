@@ -1,25 +1,59 @@
-import { NextFunction, RequestHandler } from 'express';
+import { RequestHandler } from 'express';
 import { UserService } from './users.service';
-
-const createUser: RequestHandler = async (req, res, next) => {
-  try {
-    const result = await UserService.createUser(req.body);
-    res.status(200).json({
-      success: true,
-      message: 'user created successfully!',
-      data: result,
-    });
-  } catch (err) {
-    next(err);
-  }
-};
+import sendResponse from '../../shared/sendResponse';
+import httpStatus from 'http-status';
 
 const getAllUsers: RequestHandler = async (req, res, next) => {
   try {
     const result = await UserService.getUsers();
-    res.status(200).json({
+    sendResponse(res, {
       success: true,
-      message: 'Get users successfully!',
+      statusCode: httpStatus.OK,
+      message: 'Users retrieved successfully',
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getSingleUser: RequestHandler = async (req, res, next) => {
+  try {
+    const result = await UserService.getSingleUserById(req.params.id);
+    sendResponse(res, {
+      success: true,
+      statusCode: httpStatus.OK,
+      message: 'User retrieved successfully',
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// update user info
+const updateUserInfo: RequestHandler = async (req, res, next) => {
+  try {
+    const result = await UserService.updateUserById(req.params.id, req.body);
+    sendResponse(res, {
+      success: true,
+      statusCode: httpStatus.OK,
+      message: 'User updated successfully',
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// delete user
+const deleteUser: RequestHandler = async (req, res, next) => {
+  try {
+    const result = await UserService.deleteUserById(req.params.id);
+    sendResponse(res, {
+      success: true,
+      statusCode: httpStatus.OK,
+      message: 'User deleted successfully',
       data: result,
     });
   } catch (error) {
@@ -28,6 +62,8 @@ const getAllUsers: RequestHandler = async (req, res, next) => {
 };
 
 export const UserController = {
-  createUser,
   getAllUsers,
+  getSingleUser,
+  updateUserInfo,
+  deleteUser,
 };
