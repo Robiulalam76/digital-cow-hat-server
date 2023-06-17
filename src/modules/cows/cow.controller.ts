@@ -35,7 +35,7 @@ const getCowsByDynamic: RequestHandler = async (req, res, next) => {
     sendResponse<ICow[]>(res, {
       statusCode: httpStatus.OK,
       success: true,
-      message: 'Semesters retrieved successfully !',
+      message: 'Cows retrieved successfully !',
       meta: result.meta,
       data: result.data,
     });

@@ -65,14 +65,6 @@ const getAllCowsByPagination = async (
     });
   }
 
-  // if (Object.keys(filtersData).length) {
-  //   andConditions.push({
-  //     $and: Object.entries(filtersData).map(([field, value]) => ({
-  //       [field]: value,
-  //     })),
-  //   });
-  // }
-
   const sortConditions: { [key: string]: SortOrder } = {};
 
   if (sortBy && sortOrder) {

@@ -64,6 +64,11 @@
             "date": 1687017756458,
             "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-22-error.log",
             "hash": "0ea3c1e37821f60a4f22479ff1cf81c5231127541177ac08351922d0df8783da"
+        },
+        {
+            "date": 1687021268457,
+            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-23-error.log",
+            "hash": "f8b0a3f1363818fa3cb8f97e56f3333b60ea790dbec620c80f56b85505bc45d8"
         }
     ],
     "hashType": "sha256"
