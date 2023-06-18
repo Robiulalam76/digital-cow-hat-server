@@ -72,7 +72,7 @@ const getAllCowsByPagination = (filters, paginationOptions) => __awaiter(void 0,
                 }
                 else {
                     return {
-                        [field]: value,
+                        [field]: { $regex: value, $options: 'i' },
                     };
                 }
             }),

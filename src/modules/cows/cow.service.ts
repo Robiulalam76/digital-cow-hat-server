@@ -58,7 +58,7 @@ const getAllCowsByPagination = async (
           };
         } else {
           return {
-            [field]: value,
+            [field]: { $regex: value, $options: 'i' },
           };
         }
       }),

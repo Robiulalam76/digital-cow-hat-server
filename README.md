@@ -42,10 +42,12 @@ You have been assigned the task of building the backend for an Online Cow Sellin
 
 - api/v1/orders (POST)
 
+```json
 {
-"cow": "648ed470a097704619e54eab",
-"buyer": "648ed26ea097704619e54ea3"
+  "cow": "648ed470a097704619e54eab",
+  "buyer": "648ed26ea097704619e54ea3"
 }
+```
 
 - api/v1/orders (GET)
 - api/v1/orders/648ed42aa097704619e54ea9 (Single GET)
