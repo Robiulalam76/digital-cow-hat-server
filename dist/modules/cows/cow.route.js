@@ -10,9 +10,9 @@ const cow_validation_1 = require("./cow.validation");
 const cow_controller_1 = require("./cow.controller");
 const router = express_1.default.Router();
 router.post('/', (0, validateRequest_1.default)(cow_validation_1.CowValidation.createCowZodValidate), cow_controller_1.CowController.createCow);
-router.get('/', cow_controller_1.CowController.getAllCows);
+router.get('/all', cow_controller_1.CowController.getAllCows);
 // get cows by pagination
-router.get('/paginate', cow_controller_1.CowController.getCowsByDynamic);
+router.get('/', cow_controller_1.CowController.getCowsByDynamic);
 router.get('/:id', cow_controller_1.CowController.getSingleCow);
 router.patch('/:id', (0, validateRequest_1.default)(cow_validation_1.CowValidation.updateCowZodValidate), cow_controller_1.CowController.updateCowInfo);
 router.delete('/:id', cow_controller_1.CowController.deleteCow);

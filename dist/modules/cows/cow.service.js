@@ -99,12 +99,12 @@ const getAllCowsByPagination = (filters, paginationOptions) => __awaiter(void 0,
 });
 // get all cows
 const getCows = () => __awaiter(void 0, void 0, void 0, function* () {
-    const cows = yield cow_model_1.default.find({}).sort({ _id: -1 });
+    const cows = yield cow_model_1.default.find({}).populate('seller').sort({ _id: -1 });
     return cows;
 });
 // get single Cow
 const getSingleCowById = (id) => __awaiter(void 0, void 0, void 0, function* () {
-    const cow = yield cow_model_1.default.findOne({ _id: id });
+    const cow = yield cow_model_1.default.findOne({ _id: id }).populate('seller');
     return cow;
 });
 // update cow info

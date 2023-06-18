@@ -9,10 +9,10 @@ router.post(
   validateRequest(CowValidation.createCowZodValidate),
   CowController.createCow
 );
-router.get('/', CowController.getAllCows);
+router.get('/all', CowController.getAllCows);
 
 // get cows by pagination
-router.get('/paginate', CowController.getCowsByDynamic);
+router.get('/', CowController.getCowsByDynamic);
 
 router.get('/:id', CowController.getSingleCow);
 router.patch(

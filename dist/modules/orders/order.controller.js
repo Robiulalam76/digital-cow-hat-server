@@ -45,7 +45,23 @@ const getAllOrders = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
         next(error);
     }
 });
+// get single order
+const getSingleOrder = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const result = yield order_service_1.OrderService.getSingleOrderById(req.params.id);
+        (0, sendResponse_1.default)(res, {
+            success: true,
+            statusCode: http_status_1.default.OK,
+            message: 'Order retrieved successfully',
+            data: result,
+        });
+    }
+    catch (error) {
+        next(error);
+    }
+});
 exports.OrderController = {
     createNewOrder,
     getAllOrders,
+    getSingleOrder,
 };

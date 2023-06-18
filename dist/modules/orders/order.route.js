@@ -11,4 +11,5 @@ const validateRequest_1 = __importDefault(require("../../middlewares/validateReq
 const router = express_1.default.Router();
 router.post('/', (0, validateRequest_1.default)(order_validation_1.OrderValidation.createOrderZodValidation), order_controller_1.OrderController.createNewOrder);
 router.get('/', order_controller_1.OrderController.getAllOrders);
+router.get('/:id', order_controller_1.OrderController.getSingleOrder);
 exports.orderRoutes = router;
