@@ -6,69 +6,9 @@
     "auditLog": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\.1e017f0d6313690ef17162187f0a9322c9e699ba-audit.json",
     "files": [
         {
-            "date": 1686933223349,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-16-06-22-success.log",
-            "hash": "23ee079dc5972e6830bff8935d8d7a1c5e7623ab40b1be0294707facea4985c1"
-        },
-        {
-            "date": 1686937898960,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-16-06-23-success.log",
-            "hash": "ec8196096d46e48dcdc5fd268c03f166c1f84b81cc079557ef79f71d7d6c10c3"
-        },
-        {
-            "date": 1686938530896,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-00-success.log",
-            "hash": "d26c63f2ffa24ea95b5a29b72810536e3421318518096b433d95fe10f89c3b51"
-        },
-        {
-            "date": 1686990432556,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-14-success.log",
-            "hash": "cd1cb82a3ccf383fa868b07e6f9373a2a5d0439db7664db53c10208f6db987d4"
-        },
-        {
-            "date": 1686993242793,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-15-success.log",
-            "hash": "faad7b145b718022aa943ff5c07ebb8847fc6ebeb3cc8caa20af8977ab9af36c"
-        },
-        {
-            "date": 1686996264212,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-16-success.log",
-            "hash": "f28a08d5a20876355fb1b5b9aab03a506745d21493b89811461bd3aadcf219b8"
-        },
-        {
-            "date": 1687001693491,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-17-success.log",
-            "hash": "0792a2b887f974abb1765ada156e3406553cccadb2e7e6de4aeb45283696f9bb"
-        },
-        {
-            "date": 1687003443901,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-18-success.log",
-            "hash": "c57402ab9e688b3895d21d826568517fd40f1dfff87b612625380d21bff72301"
-        },
-        {
-            "date": 1687006869224,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-19-success.log",
-            "hash": "007c4d81fbda17c61fd945890f778e7a92171d36bb7063cd6563713b0293064f"
-        },
-        {
-            "date": 1687010767794,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-20-success.log",
-            "hash": "ddcb29f28f2ec8bc75589ff84bb6403ecc1c9efd332930dcece94168c27dea9c"
-        },
-        {
-            "date": 1687016018787,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-21-success.log",
-            "hash": "52f076d1465a91af693af55a3463ae1e1209426b9ffb8f792ee11e23e94e86b1"
-        },
-        {
-            "date": 1687017756452,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-22-success.log",
-            "hash": "3965c5f932a8e670028deae4c29da4a09d05b71d928023f5c018072f7c016dfe"
-        },
-        {
-            "date": 1687021268448,
+            "date": 1687021679089,
             "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\successes\\phu-2023-17-06-23-success.log",
-            "hash": "1b3ae3e06e52ef36cdaa808ccfa5fba739628a8025c3bb8c922da35e5d617513"
+            "hash": "4fda8b67723f4584e1ad5da4e2d0fc5f878745eac47fcaf521c3a3fb6daefb5d"
         }
     ],
     "hashType": "sha256"

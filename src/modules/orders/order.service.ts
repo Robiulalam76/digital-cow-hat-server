@@ -7,6 +7,13 @@ const newOrder = async (orderData: IOrder): Promise<IOrder> => {
   return result;
 };
 
+// get all cows
+const getOrders = async (): Promise<IOrder[]> => {
+  const cows = await Order.find({}).sort({ _id: -1 });
+  return cows;
+};
+
 export const OrderService = {
   newOrder,
+  getOrders,
 };

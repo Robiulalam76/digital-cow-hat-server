@@ -6,69 +6,9 @@
     "auditLog": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\.70a521c3c09289a9727a53037a16a64353d067f9-audit.json",
     "files": [
         {
-            "date": 1686933223358,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-16-06-22-error.log",
-            "hash": "68813f5f4ea1afbd6c07a557fdded325917206a1ea413cb16faabd7615f06a26"
-        },
-        {
-            "date": 1686937898978,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-16-06-23-error.log",
-            "hash": "48745be5794460a1a5a79deb5053c10fa04e13a9bb9f28447a2b547c0be250d2"
-        },
-        {
-            "date": 1686938530904,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-00-error.log",
-            "hash": "990f9594792dc40680e946c0a19774a7b9524d9fbfec25a2ad15334075f314b5"
-        },
-        {
-            "date": 1686990432568,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-14-error.log",
-            "hash": "153b2cdb59b361ca60d50b13dcdfceef197996f600842ba0bbc111476abc5258"
-        },
-        {
-            "date": 1686993242803,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-15-error.log",
-            "hash": "f793cb2824636f93679b936f7b5820f488a517de4460179e78bda69992f9749b"
-        },
-        {
-            "date": 1686996264218,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-16-error.log",
-            "hash": "66d9f6f3dd0a7f9ccc3f6ff1db1f5a9efdabac76c7ee8fe12ef4ec38356642bd"
-        },
-        {
-            "date": 1687001693508,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-17-error.log",
-            "hash": "51308d554555a8dbb23ad301e7d74f1fbb239b0de0e7ddf20ecd4f9d9a823eb1"
-        },
-        {
-            "date": 1687003443909,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-18-error.log",
-            "hash": "db1516e80bb83e361b2323a26d8fe3e3e8cc751453f1e8d95b23466466b544d9"
-        },
-        {
-            "date": 1687006869230,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-19-error.log",
-            "hash": "684fd407f24969942c2fffe2bf2ce2508995bc1666e6e27a699df7f4d1a32d11"
-        },
-        {
-            "date": 1687010767820,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-20-error.log",
-            "hash": "57e4836cada3fa638be5c794f1c5ee34df1e1a21112ec0865f2d6f61cb111356"
-        },
-        {
-            "date": 1687016018793,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-21-error.log",
-            "hash": "f41ef8907244c26105cf55667a7b9df831badb46a93096b488e5e8b92334470d"
-        },
-        {
-            "date": 1687017756458,
-            "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-22-error.log",
-            "hash": "0ea3c1e37821f60a4f22479ff1cf81c5231127541177ac08351922d0df8783da"
-        },
-        {
-            "date": 1687021268457,
+            "date": 1687021679100,
             "name": "C:\\Next Level Web Development\\Mission 3 Be a NoSQL Backend Braniac\\Assignment-03\\logs\\winston\\errors\\phu-2023-17-06-23-error.log",
-            "hash": "f8b0a3f1363818fa3cb8f97e56f3333b60ea790dbec620c80f56b85505bc45d8"
+            "hash": "baf9f4ae933341757ba5b3e84baf6798622919880ce05b6a9d64ff03381e49fd"
         }
     ],
     "hashType": "sha256"

@@ -1,13 +1,10 @@
-/* eslint-disable no-console */
 /* eslint-disable no-unused-expressions */
-/* eslint-disable consistent-type-definitions */
 import { NextFunction, Request, Response } from 'express';
 import config from '../config';
 import { IGenericErrorMessages } from '../interfaces/IGenericErrorMessages';
 import handleValidationError from '../errors/handleValidationError';
-import ApiError from '../errors/apiError';
+import ApiError from '../errors/ApiError';
 import { Error } from 'mongoose';
-import { errorlogger } from '../shared/logger';
 import { ZodError } from 'zod';
 import handleZodError from './handleZodError';
 
@@ -17,7 +14,7 @@ const globalErrorHanndler = (
   res: Response,
   next: NextFunction
 ) => {
-  config.env === 'development' ? console.log(error) : errorlogger.error(error);
+  config.env === 'development' ? console.log(error) : console.log(error);
 
   let statusCode = 500;
   let message = 'Sometiong Went Wrong !';

@@ -17,6 +17,22 @@ const createNewOrder: RequestHandler = async (req, res, next) => {
   }
 };
 
+// get all orders
+const getAllOrders: RequestHandler = async (req, res, next) => {
+  try {
+    const result = await OrderService.getOrders();
+    sendResponse(res, {
+      success: true,
+      statusCode: httpStatus.OK,
+      message: 'Orders retrieved successfully',
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const OrderController = {
   createNewOrder,
+  getAllOrders,
 };
