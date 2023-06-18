@@ -11,5 +11,6 @@ router.post(
 );
 
 router.get('/', OrderController.getAllOrders);
+router.get('/:id', OrderController.getSingleOrder);
 
 export const orderRoutes = router;

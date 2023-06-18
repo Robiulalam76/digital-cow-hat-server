@@ -93,13 +93,13 @@ const getAllCowsByPagination = async (
 
 // get all cows
 const getCows = async (): Promise<ICow[]> => {
-  const cows = await Cow.find({}).sort({ _id: -1 });
+  const cows = await Cow.find({}).populate('seller').sort({ _id: -1 });
   return cows;
 };
 
 // get single Cow
 const getSingleCowById = async (id: string): Promise<ICow | null> => {
-  const cow = await Cow.findOne({ _id: id });
+  const cow = await Cow.findOne({ _id: id }).populate('seller');
   return cow;
 };
 

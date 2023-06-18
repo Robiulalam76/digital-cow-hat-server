@@ -6,3 +6,8 @@ export type IOrder = {
 };
 
 export type OrderModel = Model<IOrder, Record<string, unknown>>;
+
+export type INewOrder = {
+  cow: string;
+  buyer: string;
+};

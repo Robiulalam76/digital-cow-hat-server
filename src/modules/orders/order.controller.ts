@@ -32,7 +32,23 @@ const getAllOrders: RequestHandler = async (req, res, next) => {
   }
 };
 
+// get single order
+const getSingleOrder: RequestHandler = async (req, res, next) => {
+  try {
+    const result = await OrderService.getSingleOrderById(req.params.id);
+    sendResponse(res, {
+      success: true,
+      statusCode: httpStatus.OK,
+      message: 'Order retrieved successfully',
+      data: result,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const OrderController = {
   createNewOrder,
   getAllOrders,
+  getSingleOrder,
 };
