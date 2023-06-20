@@ -4,6 +4,7 @@ import config from '../config';
 import { IGenericErrorMessages } from '../interfaces/IGenericErrorMessages';
 import handleValidationError from '../errors/handleValidationError';
 import ApiError from '../errors/ApiError';
+import handleCastError from '../errors/handleCastError';
 import { Error } from 'mongoose';
 import { ZodError } from 'zod';
 import handleZodError from './handleZodError';
@@ -17,7 +18,7 @@ const globalErrorHanndler = (
   config.env === 'development' ? console.log(error) : console.log(error);
 
   let statusCode = 500;
-  let message = 'Sometiong Went Wrong !';
+  let message = 'Something Went Wrong !';
   let errorMessages: IGenericErrorMessages[] = [];
 
   if (error.name === 'ValidationError') {
@@ -27,6 +28,11 @@ const globalErrorHanndler = (
     errorMessages = simplifiedError.errorMessages;
   } else if (error instanceof ZodError) {
     const simplifiedError = handleZodError(error);
+    statusCode = simplifiedError.statusCode;
+    message = simplifiedError.message;
+    errorMessages = simplifiedError.errorMessages;
+  } else if (error?.name === 'CastError') {
+    const simplifiedError = handleCastError(error);
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessages;
@@ -55,12 +61,11 @@ const globalErrorHanndler = (
 
   res.status(statusCode).json({
     success: false,
+    statusCode,
     message,
     errorMessages,
     stack: config.env !== 'production' ? error.stack : undefined,
   });
-
-  next();
 };
 
 export default globalErrorHanndler;
