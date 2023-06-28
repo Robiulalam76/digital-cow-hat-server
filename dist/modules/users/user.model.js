@@ -6,6 +6,7 @@ const user_constant_1 = require("./user.constant");
 const userSchema = new mongoose_1.Schema({
     phoneNumber: {
         type: String,
+        unique: true,
         required: true,
     },
     role: {
